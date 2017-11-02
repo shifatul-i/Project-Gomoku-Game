@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <title>Gomoku: Play game</title>
+</head>
+<body>
+<header>
+    <h1 role="heading">Play Gomoku</h1>
+    <p>School project for CSCI 130</p>
+</header>
+<ul role="tablist" class="nav">
+    <li role="tab"><a href="index.html">Home</a></li>
+    <li role="tab"><a class="active" href="game.html">Play game</a></li>
+    <li role="tab"><a href="how_to_play.html">How to play</a></li>
+    <li role="tab"><a href="about.html">About</a></li>
+</ul>
+<div class="container game">
+    <section class="box right">
+        <p role="timer">Timer</p>
+        <h4 id="timer">0</h4>
+        <p>Number of Turns</p>
+        <h4 id="numTurns">0</h4>
+        <p>Hints</p>
+        <h4 id="hintsBest">Best position: N/A</h4>
+        <h4 id="hintsWorst">Worst position: N/A</h4>
+    </section>
+    <section class="fixed">
+        <canvas id="game" width="460px" height="460px"></canvas>
+    </section>
+    <section class="box left">
+        <p>Total pieces on board</p>
+        <h4 id="totalPieces">0</h4>
+        <p>Player 1 pieces on board</p>
+        <h4 id="p1Pieces">0</h4>
+        <p>Player 2 pieces on board</p>
+        <h4 id="p2Pieces">0</h4>
+    </section>
+</div>
+<div class="setup">
+    <div class="controls">
+        <button type="button" class="btn" onclick="init()">Reset game</button>
+        <button type="button" class="btn" onclick="getHint()">Show hint</button>
+    </div>
+    <div class="container">
+        <section class="box">
+            <label>Grid size</label><br>
+            <label><input id="grid15" type="radio" name="grid" onclick="onUpdateGrid(15)" checked>15 x 15</label>
+            <label><input id="grid19" type="radio" name="grid" onclick="onUpdateGrid(19)">19 x 19</label>
+        </section>
+        <section class="box">
+            <label>Game type</label><br>
+            <label><input id="type2" type="radio" name="type" onclick="onUpdateType(true)">
+                2 players</label>
+            <br>
+            <label><input id="type1" type="radio" name="type" onclick="onUpdateType(false)" checked>
+                vs computer</label>
+        </section>
+        <section class="box">
+            <label>Piece color</label><br>
+            <input role="button" id="color_piece_1" class="color_picker" type="color" value="#000000"
+                   onchange="onUpdateColor()">
+            <input role="button" id="color_piece_2" class="color_picker" type="color" value="#ffffff"
+                   onchange="onUpdateColor()">
+        </section>
+        <section class="box">
+            <label for="color_board">Grid color</label><br>
+            <input id="color_board" class="color_picker" type="color" value="#bfbfbf" onchange="onUpdateColor()">
+        </section>
+    </div>
+</div>
+<footer>
+    <p role="doc-footnote">&copy; 2017 CSU Fresno</p>
+</footer>
+</body>
+<script src="script.js"></script>
+<!--script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script-->
+</html>

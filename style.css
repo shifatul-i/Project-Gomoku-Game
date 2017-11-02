@@ -1,0 +1,158 @@
+html, body {
+    font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 4px;
+    height: 100%;
+    min-height: 100%;
+}
+
+h4 {
+    margin: 0.4em 0 2.6em;
+}
+
+header {
+    text-align: center;
+    background-color: #4CAF50;
+    color: white;
+    padding: 1em;
+}
+
+header h1, header p {
+    margin: 0;
+    padding: 0;
+}
+
+.game p {
+    margin-bottom: 0;
+}
+
+ul {
+    background-color: #ececec;
+    text-align: center;
+    padding: 0.6em;
+}
+
+ul li {
+    display: inline;
+}
+
+ul a {
+    color: #666;
+    text-decoration: none;
+    padding: 1em 1.6em;
+}
+
+li a:hover:not(.active) {
+    background-color: #d0d0d0;
+}
+
+li a.active {
+    color: white;
+    background-color: #dc4b26;
+}
+
+.container {
+    display: flex;
+    padding: 0.5em;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.intro {
+    margin: 8em 1em;
+    text-align: center;
+}
+
+.box {
+    flex: 1;
+}
+
+.game .box {
+    padding: 1.5em;
+    margin: auto;
+}
+
+.right {
+    text-align: right;
+}
+
+.left {
+    text-align: left;
+}
+
+.fixed {
+    width: 500px;
+}
+
+.setup {
+    padding: 1em;
+    clear: left;
+    background-color: #ececec;
+    color: black;
+    text-align: center;
+}
+
+.setup .container {
+    padding-top: 1.5em;
+    width: 50%;
+    margin: 0 25%;
+}
+
+.btn {
+    font-size: 1.2em;
+    background-color: #dc4b26;
+    border: none;
+    color: white;
+    padding: 0.8em 1.4em;
+    text-decoration: none;
+}
+
+.color_picker {
+    width: 1.5em;
+}
+
+footer {
+    padding: 0.5em;
+    clear: left;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+}
+
+h4#hintsBest {
+    margin: 0.4em 0 0.4em;
+}
+
+input[type='radio'] {
+    margin: 0 0.6em;
+}
+
+input[type='radio']:after {
+    width: 1em;
+    height: 1em;
+    border-radius: 1em;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: #d1d3d1;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid #9a9c9a;
+}
+
+input[type='radio']:checked:after {
+    width: 1em;
+    height: 1em;
+    border-radius: 1em;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: #dc4b26;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid #a30c00;
+}
